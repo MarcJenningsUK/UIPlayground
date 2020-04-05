@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:UIPlayground.Controls"
+             mc:Ignorable="d"
+             x:Class="UIPlayground.MainPage">
+
+    <StackLayout>
+        <local:Accordion Title="Sales tag" 
+                         x:Name="SalesTagAccordion"
+                         HeaderBackgroundColor="Red">
+            <local:Accordion.AccordionContentView>
+                <StackLayout>
+                    <Entry x:Name="SalesTagEntry" />
+                    <Button x:Name="SalesTagDone" 
+                        Text="Done"
+                        Clicked="SalesTagDone_Clicked"/>
+                </StackLayout>
+            </local:Accordion.AccordionContentView>
+            <local:Accordion.IndicatorView>
+
+                <Label Text="V" FontSize="Large"/>
+            </local:Accordion.IndicatorView>
+        </local:Accordion>
+
+        <local:Accordion Title="UPN tag" x:Name="UpnTagAccordion">
+
+            <local:Accordion.AccordionContentView>
+                <StackLayout>
+                    <Entry x:Name="UpnTagEntry" />
+                    <Button x:Name="UpnTagDone" 
+                            Text="Done"
+                            Clicked="UpnTagDone_Clicked"/>
+                </StackLayout>
+            </local:Accordion.AccordionContentView>
+            <local:Accordion.IndicatorView>
+
+                <Label Text="V" FontSize="Large"/>
+            </local:Accordion.IndicatorView>
+        </local:Accordion>
+        
+        
+    </StackLayout>
+
+</ContentPage>
